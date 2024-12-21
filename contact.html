@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Disaster Preparedness</title>
+  <link rel="stylesheet" href="contact_style.css">
+</head>
+
+<body class="body">
+
+  <!--NAVIGATION BAR-->
+  <header>
+    <div class="groupLogo-container">
+    <a href="index.html">
+      <img src="photos/logo.png" alt="logo_icon">
+    </a>
+    <a id="groupName" href="#">Disaster Preparedness Initiative</a>
+  </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul id="menu" class="hidden">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="hotlines.html">HOTLINES</a></li>
+      <li><a href="donate.html">DONATE</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li>
+        <a href="#">
+          <button class="btn">CONTACT US</button>
+        </a>
+      </li>
+    </ul>
+  </header>
+
+  <main class="main-content">
+    <section class="section-intro">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-description">
+        Do you have any questions or concerns about disaster preparedness? Reach out to us using the form below or
+        contact us via our phone and email details.
+      </p>
+    </section>
+
+    <section class="form-section">
+      <form class="contact-form">
+        <label for="name" class="form-label">Your Name:</label>
+        <input type="text" name="name" class="form-input" placeholder="Enter your name" required>
+
+        <label for="email" class="form-label">Your Email:</label>
+        <input type="email" name="email" class="form-input" placeholder="Enter your email" required>
+
+        <label for="message" class="form-label">Your Message:</label>
+        <textarea id="message" name="message" rows="6" class="form-textarea" placeholder="Type your message here"
+          required></textarea>
+
+        <button type="submit" class="submit-button">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <h3>Curious about us?</h3>
+      <a href="team.html"><button class="btn">OUR TEAM</button></a>
+    </div>
+    <p>© 2024 Disaster Preparedness Initiative. All rights reserved. Information provided is for educational purposes
+      and aims to promote community safety and resilience.</p>
+  </footer>
+
+</body>
+<script src="script.js" type="text/javascript"></script>
+</html>

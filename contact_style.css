@@ -1,0 +1,253 @@
+/* Common styles */
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #0D0E0D;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* Header */
+header {
+    padding-inline: 2.2em;
+    padding-top:1em;
+    display: flex;
+    justify-content: space-between;
+    height: 5.6em;
+    font-size: .8em;
+    letter-spacing: .2em;
+}
+
+.groupLogo-container{
+    display:flex;
+    align-items: center;
+}
+
+.groupLogo-container:hover{
+    opacity: 80%;
+}
+
+#groupName{
+    font-size:1.2em;
+}
+
+header .active {
+    padding: .8em;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 10px;
+}
+
+header img {
+    height: 6em;
+}
+
+header ul {
+    display: flex;
+    gap: 1.9em;
+    list-style: none;
+    align-items: center;
+}
+
+header ul li:not(:last-child):hover {
+    transform: scale(1.1);
+
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn {
+    background-color: transparent;
+    border: .15em #D4E100 solid;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: .2em;
+    padding: 1em;
+    border-radius: 0.625em;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #D4E100;
+    transition: ease-out;
+    transition-duration: 0.1s;
+    color:#0D0E0D;
+}
+
+
+
+.logo {
+    height: 100%;
+}
+
+.nav-list {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    justify-content: right;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+}
+
+.contact-button {
+    background-color: #D4E100;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    padding: 12px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Main content */
+.main-content {
+    padding: 20px;
+}
+
+.section-intro {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.section-title {
+    color: #D4E100;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Form section */
+.form-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    width: 60%;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+    color:black;
+}
+
+.form-input, .form-textarea {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    background-color: #D4E100;
+    border: .15em #D4E100 solid;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.submit-button:hover{
+    background-color: #ebef92;
+    transition: ease-out;
+    transition-duration: 0.1s;
+    color: black;
+}
+
+/* Footer */
+footer {
+    letter-spacing: .1em;
+    font-size: .8em;
+    text-align: center;
+    padding-block: 2em;
+    background-color: rgb(29, 29, 29);
+}
+
+footer .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6em;
+}
+
+
+.menu-toggle {
+    display: none; /* Hide the hamburger menu by default */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 1em;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+/* Mobile view for disaster tiles */
+@media (max-width: 780px) {
+
+    header ul {
+        display: none; /* Hide the navigation links initially */
+        position: absolute;
+        top: 5.6em; /* Adjust based on your header height */
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        text-align: center;
+        padding-top: 2em;
+        gap: 1.5em;
+        flex-direction: column;
+    }
+
+    header ul li {
+        padding: 1em;
+    }
+
+    .menu-toggle {
+        display: flex; /* Show the hamburger menu on mobile */
+    }
+
+    /* Show menu when it's toggled */
+    header ul.show {
+        display: flex;
+    }
+    
+   .contact-form{
+    width: 90%;
+   }
+
+   footer p{
+    padding-top:1.5em;
+    width:90%;
+    margin: auto;
+   }
+}

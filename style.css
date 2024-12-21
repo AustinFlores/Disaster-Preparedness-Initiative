@@ -1,0 +1,348 @@
+body {
+    background-color: #0D0E0D;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    letter-spacing: .1em;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Hidden by default */
+    background-color: #D4E100;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50q;
+    cursor: pointer;
+ 
+    color:black;
+  }
+  
+  #backToTop:hover {
+    background-color: #eaf33f;  
+  }
+  
+
+header {
+    padding-inline: 2.2em;
+    padding-block:1em;
+    display: flex;
+    justify-content: space-between;
+    height: 5.6em;
+    font-size: .8em;
+    letter-spacing: .2em;
+    position: relative; 
+    z-index: 10;
+}
+
+.groupLogo-container{
+    display:flex;
+    align-items: center;
+}
+
+.groupLogo-container:hover{
+    opacity: 80%;
+}
+
+#groupName{
+    font-size:1.2em;
+}
+
+header .active {
+    padding: .8em;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 10px;
+}
+
+header img {
+    height: 6em;
+}
+
+header ul {
+    display: flex;
+    gap: 1.9em;
+    list-style: none;
+    align-items: center;
+}
+
+header ul li:not(:last-child):hover {
+    transform: scale(1.1);
+
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn {
+    background-color: transparent;
+    border: .15em #D4E100 solid;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: .2em;
+    padding: 1em;
+    border-radius: 0.625em;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #D4E100;
+    transition: ease-out;
+    transition-duration: 0.1s;
+    color:#0D0E0D;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main div {
+    width: 80%;
+    text-align: center;
+}
+
+main h1 {
+    letter-spacing: .15em;
+    font-size: 3em;
+    margin-bottom: 0;
+}
+
+main p {
+    color: #C9C7C7;
+    font-size: 1.25em;
+    letter-spacing: 0.125em;
+    margin-block: 0;
+}
+
+main h2 {
+    color: #D4E100;
+    letter-spacing: 0.1875em;
+    font-size: 1.5625em;
+    margin-block: 1.6em 1.2;
+}
+
+/* GRID for disaster cards */
+.disaster-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    gap: 1.5em;
+    margin: 2em auto;
+    justify-items: center;
+
+}
+
+.disaster-tile {
+    width: 100%;
+    height: 10.625em;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.disaster-tile video {
+    width: 100%;
+    height: 100%;
+    filter: brightness(75%);
+}
+
+.disaster-tile:hover video{
+    filter: brightness(100%);
+}
+
+.disaster-tile:hover {
+    transform: scale(1.05);
+}
+
+.disaster-tile a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    position:relative;
+}
+
+.disaster-tile h3 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
+    padding-block: 0.44em;
+    position: absolute;
+    top:2.5em;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.disaster-tile h3:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+
+.assessment {
+    background-color: #850909;
+    width: 100%;
+    height: 120%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.25em;
+}
+
+.assessment div {
+    width: 60%;
+}
+
+.assessment h2 {
+    font-size: 1.875em;
+    color: white;
+}
+
+.assessment p {
+    font-size: 1.25em;
+    letter-spacing: 0.09375em;
+    margin-block: 2.5em;
+    color: white;
+    line-height: 1.5;
+}
+
+.assessment button {
+    margin-bottom:3em;
+}
+
+.hazard-map {
+    background-color: #E7E7E7;
+    width: 100%;
+    min-height: 56.25em;
+    color: #0D0E0D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3.125em;
+}
+
+.hazard-map div {
+    width: 80%;
+
+    text-align: center;
+}
+
+.hazard-map h2:not(:last-child) {
+    padding-block: 2.5em 0;
+}
+
+.hazard-map p {
+    margin-bottom: 2.5em;
+}
+
+.hazard-map iframe {
+    width: 80%;
+    height: 50em;
+    border: 0.125em solid black;
+}
+
+.hazard-map a{
+    text-decoration: none;
+    color:#0D0E0D;
+}
+
+.hazard-map a:hover {
+    text-decoration: underline; /* Apply hover effect only to the text */
+}
+
+footer {
+    letter-spacing: .1em;
+    font-size: .8em;
+    text-align: center;
+    padding-block: 2em;
+    background-color: rgb(29, 29, 29);
+}
+
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6em;
+}
+
+.menu-toggle {
+    display: none; /* Hide the hamburger menu by default */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 1em;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+/* Mobile view for disaster tiles */
+@media (max-width: 780px) {
+
+    header ul {
+        display: none; /* Hide the navigation links initially */
+        position: absolute;
+        top: 5.6em; /* Adjust based on your header height */
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        text-align: center;
+        padding-top: 2em;
+        gap: 1.5em;
+        flex-direction: column;
+    }
+
+    header ul li {
+        padding: 1em;
+    }
+
+    main h1{
+        font-size:2em;
+    }
+
+    main p{
+        font-size:.9em;
+    }
+
+    .menu-toggle {
+        display: flex; /* Show the hamburger menu on mobile */
+        
+    }
+
+    /* Show menu when it's toggled */
+    header ul.show {
+        display: flex;
+    }
+
+    .disaster-cards {
+        grid-template-columns: 1fr; /* Stack tiles vertically on small screens */
+    }
+
+    .disaster-tile {
+        height: 12em; /* Adjust the height of each tile for better mobile view */
+    }
+
+    .disaster-tile h3 {
+        font-size: 1.2em; /* Adjust font size for mobile */
+    }
+
+    .hazard-map{
+        padding-bottom:2em;
+    }
+
+    footer{
+        padding-inline: 1.2em;
+    }
+}

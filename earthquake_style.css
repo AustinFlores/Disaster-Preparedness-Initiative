@@ -1,0 +1,335 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('photos/eq.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+header {
+    background-color: #0D0E0D;
+    padding-inline: 2.2em;
+    padding-block:1em;
+    display: flex;
+    justify-content: space-between;
+    height: 5.6em;
+    font-size: .8em;
+    letter-spacing: .2em;
+    position: relative; 
+    z-index: 10;
+}
+
+.groupLogo-container{
+    display:flex;
+    align-items: center;
+}
+
+.groupLogo-container:hover{
+    opacity: 80%;
+}
+
+#groupName{
+    font-size:1.2em;
+}
+
+header .active {
+    padding: .8em;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 10px;
+}
+
+header img {
+    max-width: 6em;
+    height: auto;
+    display: block;
+}
+
+header ul {
+    display: flex;
+    gap: 1.9em;
+    list-style: none;
+    align-items: center;
+}
+
+header ul li:not(:last-child):hover {
+    transform: scale(1.1);
+
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn {
+    background-color: transparent;
+    border: .15em #D4E100 solid;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: .2em;
+    padding: 1em;
+    border-radius: 0.625em;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #D4E100;
+    transition: ease-out;
+    transition-duration: 0.1s;
+    color:#0D0E0D;
+}
+
+section {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.historical-earthquakes {
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.historical-earthquakes .content-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.historical-earthquakes .text-content {
+    flex: 1;
+}
+
+.historical-earthquakes .image-container {
+    flex: 0 0 700px;
+}
+
+.historical-earthquakes .image-container img {
+    width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.historical-earthquakes h2 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.historical-earthquakes p {
+    font-size: 1em;
+    text-align: justify;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.historical-earthquakes ul {
+    margin-left: 20px;
+    font-size: 1em;
+}
+
+.historical-earthquakes ul li {
+    margin-bottom: 10px;
+}
+
+.historical-earthquakes ul li strong {
+    color: #000;
+}
+.causes-earthquake .content-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.causes-earthquake .image-container {
+    flex: 0 0 600px; 
+}
+
+.causes-earthquake .image-container img {
+    width: 100%; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.causes-earthquake .text-content p {
+    color: black;
+}
+
+.causes-earthquake h2 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 15px;
+    color: black; 
+}
+
+.causes-earthquake p {
+    font-size: 1.1em;
+    text-align: justify;
+    margin-bottom: 15px;
+    color: black; 
+}
+
+table {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border-spacing: 10px;
+    border-radius: 10px;
+}
+
+table td, table th {
+    padding: 10px;
+    text-align: left;
+    color: inherit;
+}
+
+div img {
+    width: 350px;
+}
+
+/* Footer */
+footer {
+    background-color: #121212;
+    padding: 2em;
+    text-align: center;
+    color: white;
+}
+
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+footer p {
+    
+    font-size: 0.9em;
+}
+
+
+.menu-toggle {
+    display: none; /* Hide the hamburger menu by default */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 1em;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+/* Mobile view for disaster tiles */
+@media (max-width: 780px) {
+
+    header ul {
+        display: none; /* Hide the navigation links initially */
+        position: absolute;
+        top: 5.6em; /* Adjust based on your header height */
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        text-align: center;
+        padding-top: 2em;
+        gap: 1.5em;
+        flex-direction: column;
+    }
+
+    header ul li {
+        padding: 1em;
+    }
+
+    .menu-toggle {
+        display: flex; /* Show the hamburger menu on mobile */
+    }
+
+    /* Show menu when it's toggled */
+    header ul.show {
+        display: flex;
+    }
+
+    .historical-earthquakes h2 {
+        font-size: 1.2em;
+    }
+    .historical-earthquakes p {
+        font-size: 0.8em;
+    }
+    .historical-earthquakes ul {
+        font-size: 0.8em;
+    }
+    .historical-earthquakes .content-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .historical-earthquakes .image-container {
+        flex: 0 0 500px;
+    }
+    div img {
+        width: 500px;
+    }
+    footer {
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    header {
+        font-size: 14px;
+    }
+    .historical-earthquakes h2 {
+        font-size: 1.6em;
+    }
+    .historical-earthquakes .content-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .historical-earthquakes .image-container {
+        flex: 0 0 650px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        padding-inline: 20px;
+    }
+    .historical-earthquakes h2 {
+        font-size: 1.4em;
+    }
+    .historical-earthquakes p, .historical-earthquakes ul {
+        font-size: 0.9em;
+    }
+    .historical-earthquakes .content-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .historical-earthquakes .image-container {
+        flex: 0 0 600px;
+    }
+}
+

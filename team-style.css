@@ -1,0 +1,239 @@
+/* General Body and Text Styling */
+body {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Styling */
+header {
+    padding-inline: 2.2em;
+    padding-top:1em;
+    display: flex;
+    justify-content: space-between;
+    height: 5.6em;
+    font-size: .8em;
+    letter-spacing: .2em;
+}
+
+.groupLogo-container{
+    display:flex;
+    align-items: center;
+}
+
+.groupLogo-container:hover{
+    opacity: 80%;
+}
+
+#groupName{
+    font-size:1.2em;
+}
+
+header .active {
+    padding: .8em;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 10px;
+}
+
+header img {
+    height: 6em;
+}
+
+header ul {
+    display: flex;
+    gap: 1.9em;
+    list-style: none;
+    align-items: center;
+}
+
+header ul li:not(:last-child):hover {
+    transform: scale(1.1);
+
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn {
+    background-color: transparent;
+    border: .15em #D4E100 solid;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: .2em;
+    padding: 1em;
+    border-radius: 0.625em;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #D4E100;
+    transition: ease-out;
+    transition-duration: 0.1s;
+    color:#0D0E0D;
+}
+
+/* Team Section */
+.main-content {
+    text-align: center;
+  
+}
+
+.main-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+.team-table {
+    width: 90%;
+    margin: 0 auto;
+    border-spacing: 2%;
+}
+
+.team-member {
+    background-color: aliceblue;
+    padding: 2em;
+    text-align: center;
+    border-radius: 0.5em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-photo {
+    width: 12em;
+    height: 12em;
+    border: 3px solid #D4E100;
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+
+.team-member h2 {
+    color: black;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.team-member .role {
+    font-weight: bold;
+}
+
+.team-member p {
+    font-size: 1.1em;
+    color: black;
+    margin-bottom: 1em;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline;
+}
+
+.social-links img {
+    width: 2.5em;
+}
+
+/* Footer Styling */
+.footer {
+    height: 7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+/* Responsiveness for Small Screens */
+@media (max-width: 768px) {
+    header {
+        padding: 2em 3%;
+    }
+
+    .main-content h2 {
+        font-size: 2em;
+    }
+
+    .team-table {
+        display: block;
+        width: 100%;
+    }
+
+    .team-member {
+        width: 100%;
+        padding: 2em;
+    }
+
+    .team-member h2 {
+        font-size: 1.3em;
+    }
+
+    .team-member p {
+        font-size: 1em;
+    }
+
+    .team-photo {
+        width: 8em;
+        height: 8em;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #121212;
+    padding: 2em;
+    text-align: center;
+    color: white;
+}
+
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+footer p {
+    
+    font-size: 0.9em;
+}
+
+@media (max-width: 480px) {
+    .main-content h2 {
+        font-size: 1.7em;
+    }
+
+    .team-member h2 {
+        font-size: 1.2em;
+    }
+
+    .team-member p {
+        font-size: 0.9em;
+    }
+
+    .team-photo {
+        width: 7em;
+        height: 7em;
+    }
+}

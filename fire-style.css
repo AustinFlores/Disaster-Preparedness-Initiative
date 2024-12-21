@@ -1,0 +1,267 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(photos/redfirebg.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    letter-spacing: 0.05em;
+
+
+
+}
+
+/* Header Styling */
+header {
+    padding-inline: 2.2em;
+    padding-block:1em;
+    display: flex;
+    justify-content: space-between;
+    height: 5.6em;
+    font-size: .8em;
+    letter-spacing: .2em;
+    position: relative; 
+    z-index: 10;
+}
+
+.groupLogo-container{
+    display:flex;
+    align-items: center;
+}
+
+.groupLogo-container:hover{
+    opacity: 80%;
+}
+
+#groupName{
+    font-size:1.2em;
+}
+
+header .active {
+    padding: .8em;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 10px;
+}
+
+header img {
+    height: 6em;
+}
+
+header ul {
+    display: flex;
+    gap: 1.9em;
+    list-style: none;
+    align-items: center;
+}
+
+header ul li:not(:last-child):hover {
+    transform: scale(1.1);
+
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn {
+    background-color: transparent;
+    border: .15em #D4E100 solid;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: .2em;
+    padding: 1em;
+    border-radius: 0.625em;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #D4E100;
+    transition: ease-out;
+    transition-duration: 0.1s;
+    color:#0D0E0D;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    padding: 1em;
+    text-align: center;
+}
+
+.container, .right {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    box-shadow: 0.625rem 0.625rem 0.9375rem rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 1.5em;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.top-container{
+    width:100%;
+}
+h2{
+    color: #ff7300;
+    font-size: 3em;
+    margin-bottom: .5em;
+    font-weight: bolder;
+}
+
+/* Video Styling */
+video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+    object-fit: cover;
+    margin: 1em 0;
+}
+.faqs-video {
+    width: 60%;
+}
+.right-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.right {
+    flex: 1 1 calc(50% - 1em);
+    min-width: 300px;
+    max-width: 45%;
+    margin: auto;
+}
+
+ul {
+    list-style: none;
+    text-align: center;
+    line-height: 1.8em;
+}
+
+/* FAQ Section */
+.faqs-section {
+    background-color: black;
+    padding: 1em;
+    color: white;
+    text-align: center;
+}
+
+.faqs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+}
+
+.faqs-card {
+    width: 100%;
+    margin: auto;
+    padding: 1.5em;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #121212;
+    padding: 2em;
+    text-align: center;
+    color: white;
+}
+
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+footer p {
+    
+    font-size: 0.9em;
+}
+
+.menu-toggle {
+    display: none; /* Hide the hamburger menu by default */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 1em;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .right {
+        flex: 1 1 100%;
+    }
+    header ul {
+        display: none; /* Hide the navigation links initially */
+        position: absolute;
+        top: 5.6em; /* Adjust based on your header height */
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        text-align: center;
+        padding-top: 2em;
+        gap: 1.5em;
+        flex-direction: column;
+    }
+
+    header ul li {
+        padding: 1em;
+    }
+
+    .menu-toggle {
+        display: flex; /* Show the hamburger menu on mobile */
+    }
+
+    /* Show menu when it's toggled */
+    header ul.show {
+        display: flex;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    .hero {
+        flex-direction: row;
+    }
+    .container {
+        width: 30%;
+    }
+    .right-container {
+        flex-direction: row;
+        gap: 2em;
+    }
+}
